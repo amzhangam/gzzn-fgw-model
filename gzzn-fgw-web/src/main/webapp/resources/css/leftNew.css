@@ -1,0 +1,91 @@
+
+/* CSS Document */
+ul, ol, li {
+    list-style: none outside none;
+}
+div, h1, h2, h3, h4, form, label, input, textarea, img, span, ul, li,p {
+    margin: 0; padding:0;
+}
+
+img{ border:0px;}
+a { color: #000000; text-decoration:none;}
+a:hover { color: #FF3300;}
+body { font-family:Verdana; font-size:12px; 	line-height: 1.5;}
+
+
+
+
+/*×ó±ßcssÑùÊ½*/
+dt,dd{margin:0;padding:0;}
+.leftbg{
+    float:left;
+	background-image: url(../images/leftNew/leftbg.png);
+	background-repeat: repeat-y;
+	width:183px;
+	height:700px;
+}
+.leftbt{float:left;
+    background-image: url(../images/leftNew/daohangbt.png);
+	background-repeat: no-repeat;
+	height: 31px;
+	width: 173px;}
+.leftgh dt{
+	float:left;
+	background-image: url(../images/leftNew/leftbtbg.png);
+	background-repeat: repeat-x;
+	height: 25px;
+	width: 157px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #0b6aaf;
+	padding-left: 15px;
+	line-height: 25px;
+	padding-top: 7px;
+	cursor: pointer;
+}
+.leftgh dt:hover {
+	background-image: url(../images/leftNew/leftbtbg1.png);
+	color: #FFFFFF;
+}
+.leftgh dt img{
+	vertical-align: bottom;
+	padding-right: 3px;
+}
+
+.leftgh dd{
+	float:left;
+	width:135px;
+	font-size: 13px;
+	_height: 20px;
+	min-height:20px;
+	background-color: #FFFFFF;
+	margin-right: 10px;
+	padding:8px 0 3px 35px;
+	background-image: url(../images/leftNew/tb11.png);
+	background-repeat: no-repeat;
+	background-position:25px center;
+	display:none;
+}
+
+.leftgh .subMod66{
+	width:125px;
+	padding-left:45px;
+	background-position:35px center;
+	display:none;
+}
+
+.leftgh dd a {
+	color: #2c79ad;
+}
+.leftgh dd  a:hover {
+	color: #fe600b;
+	text-decoration:none
+}
+.leftgh dd img{
+	padding-right: 5px;
+}
+
+
+
+
+ 

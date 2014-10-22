@@ -1,0 +1,30 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html { 
+	overflow:auto;
+}
+
+body,textarea,input,select,td,div,p,label {
+	font-size: 13px;
+	font-family: Arial, Tahoma, "宋体", "微软雅黑";
+	/* font-weight: normal;
+	font-style: normal;
+	text-decoration: none; */
+}
+body{ background-color: #FFFFFF;}
+
+table{
+	border-collapse:collapse;
+	cellspacing:0;
+	cellpadding:0;
+}
+
+a{ text-decoration: none;}
+a:link{color: #333366; }
+a:visited{color: #333366;}
+a:hover{color: red;text-decoration: underline;}
+
+.clearFloat {clear:both;height:0;font-size:1px;line-height:0px;}

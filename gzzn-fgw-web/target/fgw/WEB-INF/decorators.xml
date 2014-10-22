@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/layouts/">
+	<excludes>
+		<pattern>/css/*</pattern>
+		<pattern>/images/*</pattern>
+		<pattern>/js/*</pattern>
+		<pattern>/resources/*</pattern>
+		<pattern>/template/*</pattern>
+		<pattern>/*.json</pattern>
+		<pattern>/eds/info/list.ac*</pattern>
+		<pattern>/eds/info/detail.ac*</pattern>
+		<pattern>/eds/event/detail.ac*</pattern>
+		<pattern>/eds/event/distribute.ac*</pattern>
+		<pattern>/eds/event/track/*</pattern>
+	</excludes>
+	
+	<decorator name="default" page="default.jsp">
+		<pattern>/*.ac</pattern>
+	</decorator>
+
+	
+</decorators>

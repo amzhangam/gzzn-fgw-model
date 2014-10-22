@@ -1,0 +1,122 @@
+@IMPORT url("public.css");
+
+body {
+	background:#FFF url('../images/login/login_line.jpg') repeat-x center top;
+}
+
+#LoginContainer {
+	width: 800px;
+	height: 420px;
+	background: url('../images/login/login_btnbg.png') no-repeat center center;
+	position: absolute;
+	/* margin: -182px 0px 0px -265px; */
+	margin: -220px 0px 0px -365px;
+	top: 50%;
+	left: 50%;
+	z-index: 100;
+}
+
+.leftCon {
+	width: 430px;
+	height: 100px;
+	float: left;
+	margin-left: 15px;
+    margin-top:10px;
+	text-align:right; 
+	/**background: url('../images/login/login_logo.png') no-repeat center center;*/
+}
+
+.rightCon {
+	width: 315px;
+	float: left;
+	margin-right: 20px;
+	text-align: right;
+}
+
+.rightCon ul {
+	list-style-type: none;
+}
+
+.rightCon .title1 {
+	font-size: 17px;
+	font-weight: bold;
+	font-family: "微软雅黑", "宋体";
+	color: #D58153;
+	height: 25px;
+	padding-top: 85px;
+}
+
+.rightCon .title2 {
+	font-size: 19px;
+	font-weight: bold;
+	font-family: "微软雅黑", "宋体";
+	color: #D58153;
+	height: 40px;
+	padding-bottom: 10px;
+}
+
+.rightCon #LoginForm {
+	height: 115px;
+	padding-top: 10px;
+}
+
+#LoginForm .userInfo {
+	height: 40px;
+	line-height: 30px;
+	color: #2583B0;
+}
+
+#LoginForm .errMsg {
+	height:25px;
+	line-height:25px;
+	font-weight:bold;
+	color: #CC0033;
+}
+
+#LoginForm .TxtInput {
+	width: 125px;
+	height: 22px;
+	line-height: 22px;
+	padding-left: 5px;
+	background: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	color: #41697E;
+	border: 1px solid #567B92;
+}
+
+
+.LoginBtnBg {
+	margin-right:15px;
+	width: 51px;
+	height:27px;
+	border:none;
+	background:url('../images/login/login_btnbg.png') no-repeat center center;
+	text-align:center; 
+	font-weight:bold; 
+	color:#2583B0;
+}
+
+/* 
+#LoginForm .btn {
+	color: #FFFFFF;
+	width: 80px;
+	height: 22px;
+	border: #1A79A7 1px solid;
+	padding: 2px 2px 0 2px;
+	margin-left: 24px;
+	cursor: pointer;
+	filter: alpha(opacity = 90); IE
+	-moz-opacity: .9; Moz + FF
+	opacity: 0.9; 支持CSS3的浏览器（FF 1.5也支持）
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,
+		StartColorStr=#2CA6F7, EndColorStr=#1884C5 );
+} */
+
+.rightCon .footTxt {
+	color: #FFFFFF;
+	font-size: 12px;
+	height: 22px;
+	line-height: 22px;
+	padding-bottom: 8px;
+}

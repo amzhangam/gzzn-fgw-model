@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>gzzn-fgw</artifactId>
+    <groupId>com.gzzn</groupId>
+    <version>1.0</version>
+  </parent>
+  <artifactId>gzzn-fgw-model</artifactId>
+  <name>gzzn-fgw-model</name>
+  <dependencies>
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.0-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-ehcache</artifactId>
+    </dependency>
+    
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>hibernate3-maven-plugin</artifactId>
+        <version>3.0</version>
+        <dependencies>
+          <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+          </dependency>
+          <!--dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>jdbc-driver</artifactId>
+            <version>11g</version>
+          </dependency-->
+          <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.12</version>
+          </dependency>
+          <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>3.3.2.GA</version>
+          </dependency>
+          <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>2.2.2</version>
+          </dependency>
+          <dependency>
+            <groupId>asm</groupId>
+            <artifactId>asm-util</artifactId>
+            <version>3.3.1</version>
+            <exclusions>
+              <exclusion>
+                <artifactId>asm-tree</artifactId>
+                <groupId>asm</groupId>
+              </exclusion>
+            </exclusions>
+          </dependency>
+        </dependencies>
+        <configuration>
+          <hibernatetool destdir="src/test/java">
+            <jdbcconfiguration configurationfile="src/test/resources/hibernate1.cfg.xml" packagename="com.gzzn.fgw.model" revengfile="src/test/resources/hibernate.reveng.xml" />
+            <hbm2java jdk5="true" ejb3="true" />
+          </hibernatetool>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

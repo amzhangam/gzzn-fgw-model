@@ -1,0 +1,39 @@
+
+ #tab{
+ 	margin-bottom:4px;
+	border-collapse:collapse;
+	width: 100%;
+ }
+ #tab td{
+	white-space: nowrap;
+	padding:4px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.tabLeft,.tabFocus,.tabNormal,.tabRight{
+	width:128px;
+	border: 0px;
+	text-align:center;
+}
+
+.tabLeft{
+	border-width:0 0 1px 0;
+	width:4px;
+}
+.tabFocus{
+	width:127px;
+	font:bold;
+	white-space: nowrap;
+	color:#FFFFFF;
+	background-image:url(../../../images_new/tab1.gif);
+}
+
+.tabNormal{
+	white-space: nowrap;
+	color:#FFFFFF;
+	background-image:url(../../../images_new/tab1_1.gif);
+}
+.tabRight{
+	border-width:0 0 1px 1px;
+}

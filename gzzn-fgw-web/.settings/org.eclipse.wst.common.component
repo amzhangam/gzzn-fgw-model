@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="gzzn-project-web">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <dependent-module archiveName="gzzn-common-util-1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gzzn-common-util/gzzn-common-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gzzn-fgw-service-impl-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gzzn-fgw-service-impl/gzzn-fgw-service-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gzzn-fgw-persist-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gzzn-fgw-persist/gzzn-fgw-persist">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gzzn-common-persist-1.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gzzn-common-persist/gzzn-common-persist">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gzzn-fgw-model-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gzzn-fgw-model/gzzn-fgw-model">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gzzn-fgw-service-api-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gzzn-fgw-service-api/gzzn-fgw-service-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gzzn-fgw-util-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gzzn-fgw-util/gzzn-fgw-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="gzzn-fgw-quartz-1.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/gzzn-fgw-quartz/gzzn-fgw-quartz">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/gzzn-project-web/src/main/webapp/WEB-INF/classes"/>
+        <property name="context-root" value="/fgw"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,33 @@
+body
+{
+	padding: 1px;
+	background-color: #FFFFFF;
+	font-size: 12px;
+}
+.form_table{
+	width:100%;
+	text-align:center;
+	border-collapse:collapse;
+	font-size: 13px;
+}
+
+.form_table th{
+	height:30px;
+	border:1px #bdd6ff solid;
+	background-color: #dee8f9;
+}
+
+.form_table td{
+	height:25px;
+	padding:3px;
+	border:1px #aac8e9 solid;
+}
+
+.btn{
+	border:1px solid #002B5B; 
+    padding:2px 7px 0 7px;
+    margin-left:5px;
+    margin-right:5px;
+    cursor:pointer;
+	background-image:url(../../images/bg_btn.gif) ;
+}

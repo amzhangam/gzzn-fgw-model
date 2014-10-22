@@ -1,0 +1,13 @@
+﻿document.write("<object id='NTKO_OCX' classid='clsid:C9BC4DFF-4248-4a3c-8A49-63A7D317F404' codebase='/download/OfficeControl.cab#version=5,0,1,0'  width='100%' height='100%' >");
+document.write('<param name="BorderStyle" value="1">');
+document.write('<param name="TitlebarColor" value="42768">');
+document.write('<param name="TitlebarTextColor" value="0">');
+document.write('<param name="Caption" value="欢迎使用！">');
+document.write('<param name="Menubar" value="-1">');
+document.write('<param name="IsNoCopy" value="-1">');
+document.write('<param name="MakerCaption" value="广州智能科技发展有限公司">');
+document.write('<param name="MakerKey" value="7673DC3A5B31632906303598D99F600038935B1C">');
+document.write('<param name="ProductCaption" value="中意交易管理系统">');
+document.write('<param name="ProductKey" value="32A68C7F4C569F85636D2D0BF504076C780AEF65">');
+document.write("<SPAN STYLE='color:red'>不能装载文档控件。请在检查浏览器的选项中检查浏览器的安全设置。</SPAN>");    
+document.write("</object>");

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd" version="2.0">
+
+<description>Custom</description>
+<tlib-version>1.0</tlib-version>
+<short-name>Custom</short-name>
+<uri>http://java.sun.com/jsp/jstl/myFunctions</uri> 
+
+<function>
+   <description>
+     subString by max bytes
+   </description>
+   <name>subString</name>
+   <function-class>com.gzzn.fgw.webUtil.SubStr</function-class>
+   <!--方法的声明，依次为返回类型、方法名、参数1类型、参数2类型，应在同一行，否则可能出错 -->
+   <function-signature>java.lang.String subString(java.lang.String, int, java.lang.String)</function-signature>
+     <example>
+        name: ${Custom:subString(name,20,'...')}
+     </example>
+</function>
+
+
+<function>
+   <description>
+     将两个字符串拼接后返回按指定长度截取串
+   </description>
+   <name>subStrLink</name>
+   <function-class>com.gzzn.fgw.webUtil.SubStr</function-class>
+   <!--方法的声明，依次为返回类型、方法名、参数1类型、参数2类型，应在同一行，否则可能出错 -->
+   <function-signature>java.lang.String subStrLink(java.lang.String, java.lang.String, int, java.lang.String)</function-signature>
+     <example>
+        name1,name2: ${Custom:subStrLink(name1, name2, 20, '...')}
+     </example>
+</function>
+
+<function>
+   <description>
+     按指定长度将字符串换行
+   </description>
+   <name>subStrLength</name>
+   <function-class>com.gzzn.fgw.webUtil.SubStr</function-class>
+   <!--方法的声明，依次为返回类型、方法名、参数1类型、参数2类型，应在同一行，否则可能出错 -->
+   <function-signature>java.lang.String subStrLength(java.lang.String, int)</function-signature>
+     <example>
+        name: ${Custom:subStrLength(name,20)}
+     </example>
+</function>
+
+
+<function>
+   <description>
+     检测list集合是否包含的数据
+   </description>
+   <name>contains</name>
+   <function-class>com.gzzn.fgw.webUtil.SubStr</function-class>
+   <!--方法的声明，依次为返回类型、方法名、参数1类型、参数2类型，应在同一行，否则可能出错 -->
+   <function-signature>boolean contains(java.util.List,java.lang.String)</function-signature>
+     <example>
+        name: ${Custom:contains(actor,args)}
+     </example>
+</function>
+
+</taglib>
+
+

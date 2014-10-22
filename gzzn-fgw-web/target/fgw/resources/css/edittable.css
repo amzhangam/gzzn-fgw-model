@@ -1,0 +1,237 @@
+/* CSS Document */
+/*
+* {
+    padding:0;
+    margin:0;
+}
+
+html { 
+	overflow:auto;
+}
+
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background:#FFFFFF;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+}
+table{
+	width:100%;	
+	font-size: 12px;
+	font-family:Arial, Helvetica, sans-serif;
+	cellspacing:0;
+	cellpadding:0;
+	border-collapse:collapse;
+}
+
+a:link {  color: #11387C;text-decoration: none}
+a:visited {  color: #11387C;text-decoration: none}
+a:active {  color: #D33700; text-decoration: none}
+a:hover {  color: #D33700; text-decoration: none}
+
+table{
+	width:100%;	
+	font-size: 12px;
+	cellspacing:0;
+	cellpadding:0;
+	border-collapse:collapse;
+}
+*/
+
+input[type=text],input[type=password],select{
+	border:1px solid #002B5B; 
+	background-color:#FFFFFF;
+	padding-left:1px;
+	height:20px;
+	line-height: 20px;
+}
+
+
+
+/**婵炴挸鎳樺▍搴∶归鐓幮�/
+.clearFloat {clear:both;height:0;font-size:1px;line-height:0px;list-style: none;}
+
+
+.mainCon{
+	padding-top:27px;
+	padding-bottom:15px;
+	margin-left:auto;
+	margin-right: auto;
+	width:98%;
+	/* min-width: 840px; */
+}
+
+/**閻炴稏鍔岄妵鏃堟晬濮橆厾鍙�悹鍥ュ灪閺嗙喖骞戦鐣屽鐎殿噯鎷�/
+.tbHeadLeft{width:1%;height:37px;background: url("../images/k0.gif");} 
+.tbHeadTitle{width:12%;text-align:center;font-weight:bold;background-image:url("../images/bg_k1.gif")} 
+.tbHeadMid{width:39px;height:37px;background: url("../images/k1.gif");}  
+.tbHeadBg{background: url("../images/bg_k2.gif") repeat-x;}
+.tbHeadRight{float:right;width:17px;height:37px;background: url("../images/k2.gif");}  
+
+
+/**闁轰胶澧楀畵渚�礆濡ゅ嫨锟介柡宥呭槻缁憋拷*/
+.listTab,.list{
+	word-break:keep-all;
+	border: 2px solid #85B0E3;
+}
+.listTab tr{
+	height:25px;
+	line-height:25px;
+}
+.listTab th{
+	padding-left:3px;
+	background:#D3E4FF;
+	font-weight: normal;
+	color:#002D5F;
+	text-align:left;
+	border-left:#85B0E3 1px solid;
+	border-bottom:#85B0E3 3px solid
+}
+.listTab td{
+	padding-left:3px;
+	border-bottom:#cccccc 1px solid;
+}
+
+/**閻炴稏鍔嶉悧鍛婄▔椤撶姵鐣遍柛銉ュ⒔婢ф牠骞愭径鎰唉*/
+.modifyImgBtn {
+	padding-left: 22px;
+	padding-bottom: 5px;
+	background: url('../images/icon_modify.gif') no-repeat;
+}
+.deleteImgBtn {
+	padding-left: 22px;
+	padding-bottom: 5px;
+	background: url('../images/icon_delete.gif') no-repeat;
+}
+.lineImgSprit {
+	display: inline-block;
+	padding-left: 7px;
+	padding-right: 3px;
+}
+
+/**button 闁圭顧侀幐锟�
+.btn{
+	background-image: url('../images/office/edit_button_background.jpg');
+	background-repeat: repeat-x;
+	height: 22px;
+	border: 1px solid #A5B6D2;
+	border-image: initial;
+	padding: 0px 6px 0px 6px;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+/**闁告帒妫濋妴澶愬冀瀹勬壆纭�*/
+.pageFont{
+	padding-left:5px;
+	background:#D3E4FF;
+	padding-right:20px;
+	text-align:right
+}
+
+
+
+
+
+
+.alignLeft{text-align: left !important;}
+.alignCenter{text-align: center !important;}
+.alignRight{text-align: right !important;}
+.widthPct5{width:5%;}
+.widthPct7{width:7%;}
+.widthPct10{width:10%;}
+.widthPct14{width:14%;}
+.widthPct18{width:18%;}
+.width100{width:100px !important;}
+.width90{width:90px !important;}
+.width80{width:80px !important;}
+.width35{width:35px !important;}
+
+.height150{height:150px !important;}
+
+.bordercolor {
+	 bordercolorlight: #999999;
+	 bordercolordark: #000000 
+}
+
+/***********************************************/
+/**==============濞寸姰鍎扮粭鍛▔閾忓湱妞介弶鍫熷灣娣囧﹪骞侀姘仚閻炴稏鍔庡▓鎴﹀冀瀹勬壆纭�========**/
+/***********************************************/
+.editDiv{
+	/* background:#FBFBEE; */
+	background-color: #FFFFFF;
+	width:100%;
+	/* border: #6B699F 1px solid; */
+}
+.editTab2{
+	word-break:keep-all;
+	border: 1px solid #aac8e9;
+	width:100%;
+}
+.editTab2 tr{
+	height:32px;
+}
+.editTab2 th{
+	width:10%;
+	padding-right:4px;
+	text-align:center;
+	font-weight:normal;
+	border: 1px solid #aac8e9;
+	background-color: rgb(222, 232, 249);
+}
+.editTab2 td{
+	padding-left:4px;
+	text-align:left;
+	border: 1px solid #aac8e9;
+}
+.editTab2 input[type=text]{
+	border: #CCCCCC 1px solid;
+	background-color:#FFFFFF;
+	padding-left:1px;
+	padding-right:1px;
+	height:25px;
+	width:90%;
+}
+.editTab2 input[type=password]{
+	border: #CCCCCC 1px solid;
+	background-color:#FFFFFF;
+	height:25px;
+	line-height:25px;
+	width:210px;
+}
+.editTab2 select{
+	border: #CCCCCC 1px solid;
+	background-color:#FFFFFF;
+	height:25px;
+	line-height:25px;
+	width:210px;
+}
+.editTab2 select option{
+	line-height:30px;
+	min-height:30px;
+	_height:30px;
+	margin: 5px 0;
+}
+.mulSelect{
+	border: #CCCCCC 1px solid;
+	height:70px !important;
+	width:210px !important;
+	margin:4px 0 4px 0;
+}
+.editTab2 textarea{
+	border: #CCCCCC 1px solid;
+	background-color:#FFFFFF;
+	margin:4px 0 4px 0;
+	padding:3px 0 3px 1px;
+	height:100px;
+	width:280px;
+}
+.msg{color: #FF0000;}
+
+

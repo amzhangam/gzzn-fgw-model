@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--package name="struts-common" extends="struts-default" namespace="/"-->
+	<package name="struts-common" extends="struts-default" namespace="/">
+		<interceptors>
+		
+		 	<!-- 
+            <interceptor name="CheckUserInterceptor" class="com.gzzn.fgw.interceptor.CheckUserInterceptor"/>
+		     -->
+		    <!-- 2014-6-27  LHQ加入 --> 
+		    <interceptor name="MyFileUploadInterceptor" class="com.gzzn.fgw.interceptor.MyFileUploadInterceptor" />
+		    
+		    <interceptor name="deleteInterceptor" class="com.gzzn.fgw.interceptor.DeleteInterceptor"/>
+           
+           <!-- 
+            <interceptor-stack name="teamwareStack">
+                <interceptor-ref name="defaultStack"/>
+                 
+                <interceptor-ref name="CheckUserInterceptor"/>
+                
+            </interceptor-stack>
+            -->
+            
+            <interceptor-stack name="deleteStack">
+            	<interceptor-ref name="defaultStack" />
+            	<interceptor-ref name="deleteInterceptor"/>
+            	<interceptor-ref name="logger" />
+            	<interceptor-ref name="timer" />
+            </interceptor-stack>
+            
+            <interceptor-stack name="tokenStack">
+            	<interceptor-ref name="defaultStack" />
+            	<interceptor-ref name="tokenSession" />
+            	<interceptor-ref name="logger" />
+            	<interceptor-ref name="timer" />
+            </interceptor-stack>
+            
+            
+            
+            
+            
+            <!--  interceptor-stack name="deleteStack">
+            	<interceptor-ref name="deleteInterceptor"></interceptor-ref>
+            	<interceptor-ref name="defaultStack" />
+            </interceptor-stack-->
+		
+		    <!-- 
+			<interceptor name="SSOLoginInterceptor" class="com.gzzn.interceptor.SSOLoginInterceptor" /> 
+            <interceptor-stack name="teamwareStack">
+                <interceptor-ref name="defaultStack" />
+                <interceptor-ref name="SSOLoginInterceptor" />
+            </interceptor-stack>
+            -->
+
+		</interceptors>
+		
+		
+		<!--  default-interceptor-ref name="myStack" /-->
+		
+
+		<action name="deleteDenied">
+			<result>/WEB-INF/content/error/600.jsp</result>
+		</action>
+    </package>
+    <constant name="struts.convention.default.parent.package" value="struts-common"/>
+</struts>

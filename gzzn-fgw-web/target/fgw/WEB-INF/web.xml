@@ -1,0 +1,208 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    metadata-complete="true" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" >
+
+ 	<display-name>gzzn-web</display-name>
+	
+	<!-- Spring ApplicationContext配置文件的路径,可使用通配符,多个路径用,号分隔此参数用于后面的Spring Context Loader -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:/META-INF/spring/applicationContext-*.xml
+		</param-value>
+	</context-param>
+	
+	<listener>  
+        <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>  
+    </listener> 
+	<!--Spring的ApplicationContext 载入 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
+	<listener>
+        <listener-class>com.gzzn.fgw.listener.StartupApplicationContextListener</listener-class>
+    </listener>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>VerfCodeImageServlet</servlet-name>
+    <servlet-class>com.gzzn.fgw.action.sys.VerfCodeImageServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>VerfCodeImageServlet</servlet-name>
+    <url-pattern>/servlet/VerfCodeImageServlet</url-pattern>
+  </servlet-mapping>
+
+
+	<!-- Filter 定义 
+	<filter>
+		<filter-name>jspFilter</filter-name>
+		<filter-class>com.gzzn.interceptor.SSOFilter</filter-class>
+		<init-param>
+			<param-name>indexString</param-name>
+			<param-value>/index.jsp;/index2.jsp;/ssoLogin.jsp;/navigation.jsp;.js;.css;.jpg;.gif;.png</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>jspFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	  -->
+	
+	<!-- Character Encoding filter -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>security</filter-name>
+		<filter-class>com.gzzn.fgw.webUtil.SecurityFilter</filter-class>
+		<init-param>
+			<param-name>excludePath</param-name>
+			<param-value>
+			/index.jsp,
+			/login/login.json,
+			/sys/organNew/checkOrganName.json,
+			/sys/organNew/ownerRegist.ac,
+			/sys/organNew/ownerRegist.json,
+			/sys/organNew/registOwner.ac,
+			/sys/organNew/registOwner.json,
+			/sys/organNew/registSuccess.ac,
+			/sys/organization/ownerRegist.ac,
+			/sys/organization/ownerRegist.json,
+			/sys/organization/registSuccess.ac,
+			/sys/organization/getAreaJson.json,
+			/sys/organization/getUnitNatureJson.json,
+			/sys/organization/registOwner.ac,
+			/sys/organization/checkRegistName.json,
+			/sys/organization/checkRegistCode.json,
+			/sys/organization/checkVerfCodeImage.json,
+			/sys/organization/genVerfCodeImage.json,
+			/com/getDictItemsJson.json,
+			/com/getSysXqJson.json,
+			/servlet/VerfCodeImageServlet
+			</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>security</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+ 
+	<!-- Open Entity Manager in View filter -->
+	<filter>
+		<filter-name>openEntityManagerInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.jpa.support.OpenEntityManagerInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>openEntityManagerInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 
+	 <filter>
+	    <filter-name>openSessionInViewFilter</filter-name>
+	    <filter-class>com.gzzn.project.webUtil.GzznOpenSessionInViewFilter</filter-class>
+	    <init-param>
+			<param-name>excludeSuffixs</param-name>
+			<param-value>.js,.css,.jpg,.gif,.png</param-value>
+		</init-param>
+	  </filter>
+	  <filter-mapping>
+	    <filter-name>openSessionInViewFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	  </filter-mapping>
+	 -->
+	
+	
+	<!-- SiteMesh Web-Page Layout filter-->
+	<filter>
+		<filter-name>sitemeshFilter</filter-name>
+		<filter-class>com.opensymphony.sitemesh.webapp.SiteMeshFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>sitemeshFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+		<init-param>
+			<param-name>actionPackages</param-name>
+			<param-value>com.gzzn.fgw.action</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!--filter>
+        <filter-name>antiSqlInjection</filter-name>
+        <filter-class>com.gzzn.fgw.webUtil.AntiSqlInjectionfilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>antiSqlInjection</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping-->
+	
+	<filter>
+		<filter-name>antiSqlInjection</filter-name>
+		<filter-class>com.gzzn.util.web.filter.AntiSqlInjectionfilter</filter-class>
+		<init-param>
+			<param-name>redirectUrl</param-name>
+			<param-value>/WEB-INF/content/error/700.jsp</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>antiSqlInjection</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+   <!-- <filter>
+        <filter-name>hibernateFilter</filter-name>
+        <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+        <init-param>
+            <param-name>sessionFactoryBeanName</param-name>
+            <param-value>sessionFactory</param-value>
+        </init-param>
+    </filter> -->
+	<!-- session超时定义,单位为分钟 -->
+	<session-config>
+		<session-timeout>120</session-timeout>
+	</session-config>
+	
+	<welcome-file-list>
+	    <welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<!-- 出错页面定义 -->
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/WEB-INF/content/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/WEB-INF/content/error/500.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/content/error/404.jsp</location>
+	</error-page>
+</web-app>
